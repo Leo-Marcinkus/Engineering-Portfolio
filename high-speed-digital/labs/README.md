@@ -92,9 +92,9 @@ These studies demonstrate the ability to:
 
 ## Files
 
-- `labs/transmission-line-impedance-matching.pdf`
-- `labs/time-frequency-domain-prbs-analysis.pdf`
-- `labs/capacitor-srf-decoupling.pdf`
+- `high-speed-digital/labs/transmission-line-impedance-matching.pdf`
+- `high-speed-digital/labs/time-frequency-domain-prbs-analysis.pdf`
+- `high-speed-digital/labs/capacitor-srf-decoupling.pdf`
 
 ---
 
