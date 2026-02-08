@@ -92,8 +92,6 @@ performance relative to the reference design.
 - `report.pdf` - Full technical report and measurements  
 - `images/` - Board photos and oscilloscope captures  
 - `schematic.pdf` - Altium schematic  
-- `layout.pdf` - PCB layout files  
-- `firmware/` - Test sketches and configuration files (if applicable)
 
 ---
 
