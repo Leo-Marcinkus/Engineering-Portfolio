@@ -95,7 +95,7 @@ These findings support the use of VCSELs in:
 ## Files
 
 - `vcsel-device-structure-performance-analysis.pdf` - Full technical research report
-- 'images/' - Simulation images  
+- `images/` - Simulation screenshots   
 
 ---
 
