@@ -1,4 +1,4 @@
-# Instrument Droid — Multi-Function Measurement and Test Shield
+# Instrument Droid - Multi-Function Measurement and Test Shield
 
 **Course:** ECEN 3730 - PCB Design and Manufacture  
 **Date:** Fall 2025  
@@ -106,11 +106,11 @@ identified and documented for future revision.
 
 ## Files
 
-- `report.pdf` — Full system design and validation report  
-- `images/` — Assembly photos and measurement screenshots  
-- `schematic.pdf` — Altium schematic  
-- `layout.pdf` — PCB layout files  
-- `firmware/` — Embedded control and measurement code  
+- `report.pdf` - Full system design and validation report  
+- `images/` - Assembly photos and measurement screenshots  
+- `schematic.pdf` - Altium schematic  
+- `layout.pdf` - PCB layout files  
+- `firmware/` - Embedded control and measurement code  
 
 ---
 
