@@ -89,7 +89,7 @@ performance relative to the reference design.
 
 ## Files
 
-- `report.pdf` - Full technical report and measurements  
+- `board3-golden-arduino.pdf` - Full technical report and measurements  
 - `images/` - Board photos and oscilloscope captures  
 - `schematic.pdf` - Altium schematic  
 
