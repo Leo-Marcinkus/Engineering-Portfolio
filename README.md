@@ -10,7 +10,7 @@ measurement analysis, and troubleshooting.
 
 ---
 
-## Featured Projects:star:
+## Featured Projects :star:
 
 ### :star:Golden Arduino — Custom Arduino-Compatible Board  
 **PCB Design, Altium, Embedded Hardware**  
