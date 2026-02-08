@@ -91,11 +91,11 @@ and rail stability relative to poor layouts.
 
 ## Files
 
-- `report.pdf` — Full experimental analysis and results  
-- `images/` — Board photos and oscilloscope captures  
-- `schematic.pdf` — Altium schematic  
-- `layout.pdf` — PCB layout files  
-- `measurement-data/` — Processed scope measurements (if applicable)
+- `report.pdf` - Full experimental analysis and results  
+- `images/` - Board photos and oscilloscope captures  
+- `schematic.pdf` - Altium schematic  
+- `layout.pdf` - PCB layout files  
+- `measurement-data/` - Processed scope measurements (if applicable)
 
 ---
 
