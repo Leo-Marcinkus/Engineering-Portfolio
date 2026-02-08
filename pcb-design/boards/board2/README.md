@@ -1,6 +1,6 @@
 # Board 2 — PCB Layout Practices and Switching Noise Analysis
 
-**Course:** ECEN 3730 — PCB Design and Manufacture  
+**Course:** ECEN 3730 - PCB Design and Manufacture  
 **Date:** Fall 2025  
 
 ## Overview
