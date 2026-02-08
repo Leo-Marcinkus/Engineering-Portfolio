@@ -94,7 +94,8 @@ These findings support the use of VCSELs in:
 
 ## Files
 
-- `LMarcinkusMidtermReport-4002.pdf` - Full technical research report  
+- `vcsel-device-structure-performance-analysis.pdf` - Full technical research report
+- 'images/' - Simulation images  
 
 ---
 
