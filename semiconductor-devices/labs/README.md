@@ -69,7 +69,7 @@ Key techniques demonstrated:
 - Optical-to-electrical conversion analysis
 
 This lab provides strong evidence of experimental rigor and
-device-level modeling skill. :contentReference[oaicite:2]{index=2}
+device-level modeling skill.
 
 ---
 
@@ -90,7 +90,7 @@ Key techniques demonstrated:
 - Model-to-data correlation
 
 This lab highlights strong understanding of MOSFET physics and
-measurement methodology. :contentReference[oaicite:3]{index=3}
+measurement methodology.
 
 ---
 
