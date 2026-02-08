@@ -106,11 +106,9 @@ identified and documented for future revision.
 
 ## Files
 
-- `report.pdf` - Full system design and validation report  
+- `board4-instrument-droid.pdf` - Full system design and validation report  
 - `images/` - Assembly photos and measurement screenshots  
 - `schematic.pdf` - Altium schematic  
-- `layout.pdf` - PCB layout files  
-- `firmware/` - Embedded control and measurement code  
 
 ---
 
