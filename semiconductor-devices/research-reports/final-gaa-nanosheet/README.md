@@ -13,7 +13,7 @@ The paper examines device structure, electrostatic behavior, scaling trends,
 and circuit-level performance, and compares nanosheet FETs to alternative
 architectures such as TreeFETs and CombFETs.
 
-The full report is available in `LeoMarcinkusFinalReport-4002.pdf`
+The full report is available in `gaa-nanosheet-fet-scaling-performance-analysis.pdf`
 
 ## Technical Objectives
 
