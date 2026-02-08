@@ -8,9 +8,8 @@ I primarily focus on hardware design, signal integrity, and
 semiconductor devices, with a large emphasis on hands-on learning,
 measurement analysis, and troubleshooting.
 
-🔽 Download Resume (PDF)
-📄 [Leo Marcinkus - Resume]
-(Leo-Marcinkus-Resume.pdf)
+▶️ Download Resume (PDF)
+📄 [Leo Marcinkus - Resume](Leo-Marcinkus-Resume.pdf)
 
 ---
 
