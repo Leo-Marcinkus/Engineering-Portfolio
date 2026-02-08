@@ -1,6 +1,6 @@
 # Golden Arduino — Custom Arduino-Compatible Development Board
 
-**Course:** ECEN 3730 — PCB Design and Manufacture  
+**Course:** ECEN 3730 - PCB Design and Manufacture  
 **Date:** Fall 2025  
 
 ## Overview
