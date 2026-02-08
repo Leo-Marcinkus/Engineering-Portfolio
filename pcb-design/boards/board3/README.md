@@ -1,4 +1,4 @@
-# Golden Arduino — Custom Arduino-Compatible Development Board
+# Golden Arduino - Custom Arduino-Compatible Development Board
 
 **Course:** ECEN 3730 - PCB Design and Manufacture  
 **Date:** Fall 2025  
@@ -89,11 +89,11 @@ performance relative to the reference design.
 
 ## Files
 
-- `report.pdf` — Full technical report and measurements  
-- `images/` — Board photos and oscilloscope captures  
-- `schematic.pdf` — Altium schematic  
-- `layout.pdf` — PCB layout files  
-- `firmware/` — Test sketches and configuration files (if applicable)
+- `report.pdf` - Full technical report and measurements  
+- `images/` - Board photos and oscilloscope captures  
+- `schematic.pdf` - Altium schematic  
+- `layout.pdf` - PCB layout files  
+- `firmware/` - Test sketches and configuration files (if applicable)
 
 ---
 
