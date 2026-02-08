@@ -84,7 +84,7 @@ simulation estimates.
 
 ## Files
 
-- `report.pdf` - Full design and measurement report  
+- `board1-555-timer-platform.pdf` - Full design and measurement report  
 - `images/` - Assembly photos and oscilloscope captures  
 
 ---
