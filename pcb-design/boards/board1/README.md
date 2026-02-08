@@ -86,7 +86,6 @@ simulation estimates.
 
 - `report.pdf` - Full design and measurement report  
 - `images/` - Assembly photos and oscilloscope captures  
-- `schematic.pdf` - Altium schematic  
 
 ---
 
