@@ -13,7 +13,7 @@ The paper reviews cavity design, distributed Bragg reflectors (DBRs), and
 quantum well operation, and evaluates how structural parameters influence
 loss, efficiency, and modulation bandwidth.
 
-The full report is available in `report.pdf`. :contentReference[oaicite:0]{index=0}
+The full report is available in `LMarcinkusMidtermReport-4002.pdf`
 
 ## Technical Objectives
 
@@ -94,9 +94,7 @@ These findings support the use of VCSELs in:
 
 ## Files
 
-- `report.pdf` - Full technical research report  
-- `references/` - Source literature (if applicable)  
-- `figures/` - Simulation and device diagrams (if applicable)  
+- `LMarcinkusMidtermReport-4002.pdf` - Full technical research report  
 
 ---
 
