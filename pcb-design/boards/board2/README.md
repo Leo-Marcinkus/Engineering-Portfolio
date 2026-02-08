@@ -91,7 +91,7 @@ and rail stability relative to poor layouts.
 
 ## Files
 
-- `report.pdf` - Full experimental analysis and results  
+- `board2-layout-noise-comparison` - Full experimental analysis and results  
 - `images/` - Board photos and oscilloscope captures  
 
 ---
