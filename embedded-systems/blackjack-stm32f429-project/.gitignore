@@ -1,0 +1,20 @@
+# Build output
+**/Debug/
+**/Release/
+
+# Eclipse / CubeIDE
+**/.settings/
+**/*.launch
+**/.metadata/
+
+# Object files
+**/*.o
+**/*.d
+**/*.elf
+**/*.map
+**/*.list
+
+# Backup / temp
+*~
+*.swp
+.DS_Store
