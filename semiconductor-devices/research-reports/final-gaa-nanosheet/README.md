@@ -103,7 +103,7 @@ These devices enable:
 
 ## Files
 
-- `LeoMarcinkusFinalReport-4002.pdf` - Full technical research report
+- `gaa-nanosheet-fet-scaling-performance-analysis` - Full technical research report
 
 ---
 
