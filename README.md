@@ -1,4 +1,4 @@
-# Leo Marcinkus — Electrical Engineering Portfolio
+# Leo Marcinkus - Electrical Engineering Portfolio
 
 This repository holds various curated engineering projects, lab reports,
 and technical papers I've completed during my undergraduate and accelerated
@@ -15,7 +15,7 @@ measurement analysis, and troubleshooting.
 
 ## Featured Projects :star:
 
-### :star:Golden Arduino — Custom Arduino-Compatible Board  
+### :star:Golden Arduino - Custom Arduino-Compatible Board  
 **PCB Design, Altium, Embedded Hardware**  
 Designed and assembled a custom Arduino-compatible development board with
 optimized power distribution, bootloader integration, and full IDE compatibility.  
@@ -23,7 +23,7 @@ optimized power distribution, bootloader integration, and full IDE compatibility
 
 ---
 
-### :star:Instrument Droid — Measurement and Test Shield  
+### :star:Instrument Droid - Measurement and Test Shield  
 **Mixed-Signal Design, System Integration**  
 Multi-function instrumentation shield integrating DAC, ADC, programmable load,
 and OLED interface for Thevenin equivalent measurement and system validation.  
@@ -95,6 +95,3 @@ peripheral drivers, and user interfaces.
 - GitHub: https://github.com/Leo-Marcinkus
 
 ---
-
-This portfolio is actively maintained and updated with new projects and
-technical work.
