@@ -156,7 +156,7 @@ lighting system controlled by ESP32 microcontrollers.
 
 ## Files
 
-- `receiver.ino` - ESP32-C3 receiver firmware  
-- `transmitter.ino` - ESP32 transmitter firmware   
+- `ReceiverCode.ino` - ESP32-C3 receiver firmware  
+- `TransmitterCode.ino` - ESP32 transmitter firmware   
 
 ---

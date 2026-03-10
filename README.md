@@ -13,18 +13,50 @@ measurement analysis, and troubleshooting.
 
 ---
 
-## Featured Projects :star:
+# Featured Project
 
-### :star:Golden Arduino - Custom Arduino-Compatible Board  
-**PCB Design, Altium, Embedded Hardware**  
+## :bulb: [Retro Glass Fuse Wireless Lamp – Battery-Powered ESP32 Lighting System](retro-fuse-lamp/)
+
+<p align="center">
+  <img src="projects/retro-fuse-lamp/retro-fuse-lamp-demo.gif" width="550">
+</p>
+
+A battery-powered embedded lighting system built using ESP32 microcontrollers
+and wireless ESP-NOW communication. The system integrates Li-ion battery
+charging, power regulation, and MOSFET LED switching into a compact hardware
+prototype with wireless control.
+
+This project combines embedded firmware development, power electronics design,
+and wireless debugging while emphasizing power efficiency and safe battery
+management.
+
+📂 Project Folder  
+`projects/retro-fuse-lamp/`
+
+---
+
+## More Featured Projects :star:
+
+### :star: [Golden Arduino - Custom Arduino-Compatible Board](pcb-design/boards/board3/) 
+**PCB Design, Altium, Embedded Hardware**
+
+<p align="center">
+  <img src="pcb-design/boards/board3/images/SolderedBoard.jpg" width="400">
+</p>
+
 Designed and assembled a custom Arduino-compatible development board with
 optimized power distribution, bootloader integration, and full IDE compatibility.  
 `pcb-design/boards/board3-golden-arduino/`
 
 ---
 
-### :star:Instrument Droid - Measurement and Test Shield  
-**Mixed-Signal Design, System Integration**  
+### :star: [Instrument Droid - Measurement and Test Shield](pcb-design/boards/board4/)  
+**Mixed-Signal Design, System Integration** 
+
+<p align="center">
+  <img src="pcb-design/boards/board4/images/SolderedFunctioning2.jpg" width="400">
+</p>
+
 Multi-function instrumentation shield integrating DAC, ADC, programmable load,
 and OLED interface for Thevenin equivalent measurement and system validation.  
 `pcb-design/boards/board4-instrument-droid/`
