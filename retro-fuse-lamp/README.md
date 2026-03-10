@@ -25,13 +25,17 @@ emphasizing power efficiency, safe battery management, and compact embedded inte
 
 ### System Demonstration
 
-![Retro Fuse Lamp Demo](retro-fuse-lamp-demo.gif)
+<p align="center">
+  <img src="retro-fuse-lamp-demo.gif" width="500">
+</p>
 
 ### Hardware Overview
 
-![Lamp Angle 1](lamp-angle1.png)
-![Lamp Angle 2](lamp-angle2.png)
-![Lamp Angle 3](lamp-angle3.png)
+<p align="center">
+  <img src="lamp-angle1.png" width="250">
+  <img src="lamp-angle2.png" width="250">
+  <img src="lamp-angle3.png" width="250">
+</p>
 
 ## Technical Objectives
 
