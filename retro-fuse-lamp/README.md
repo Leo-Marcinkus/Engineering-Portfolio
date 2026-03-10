@@ -1,4 +1,4 @@
-# ESP-NOW Wireless Lamp – Battery-Powered ESP32 Lighting System
+# Retro Glass Fuse Wireless Lamp – Battery-Powered ESP32 Lighting System
 
 **Project Type:** Personal Project - Hardware Design  
 **Date:** March 2026  
