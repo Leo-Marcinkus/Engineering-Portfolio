@@ -18,7 +18,7 @@ measurement analysis, and troubleshooting.
 ## :bulb: [Retro Glass Fuse Wireless Lamp – Battery-Powered ESP32 Lighting System](retro-fuse-lamp/)
 
 <p align="center">
-  <img src="projects/retro-fuse-lamp/retro-fuse-lamp-demo.gif" width="550">
+  <img src="retro-fuse-lamp/retro-fuse-lamp-demo.gif" width="550">
 </p>
 
 A battery-powered embedded lighting system built using ESP32 microcontrollers
@@ -30,7 +30,7 @@ This project combines embedded firmware development, power electronics design,
 and wireless debugging while emphasizing power efficiency and safe battery
 management.
 
-📂 Project Folder  
+📂 Project Folder
 `projects/retro-fuse-lamp/`
 
 ---
@@ -46,6 +46,8 @@ management.
 
 Designed and assembled a custom Arduino-compatible development board with
 optimized power distribution, bootloader integration, and full IDE compatibility.  
+
+📂 Project Folder
 `pcb-design/boards/board3-golden-arduino/`
 
 ---
@@ -58,50 +60,56 @@ optimized power distribution, bootloader integration, and full IDE compatibility
 </p>
 
 Multi-function instrumentation shield integrating DAC, ADC, programmable load,
-and OLED interface for Thevenin equivalent measurement and system validation.  
+and OLED interface for Thevenin equivalent measurement and system validation.
+
+📂 Project Folder
 `pcb-design/boards/board4-instrument-droid/`
 
 ---
 
-### :star:GAA Nanosheet FET Scaling Analysis  
-**Semiconductor Devices, Research Analysis**  
+### :star: [GAA Nanosheet FET Scaling Analysis](semiconductor-devices/research-reports/final-gaa-nanosheet)
+**Semiconductor Devices, Research Analysis**
 Technical research paper analyzing gate-all-around nanosheet transistor
-architectures for advanced CMOS scaling beyond FinFET technology.  
+architectures for advanced CMOS scaling beyond FinFET technology.
+
+📂 Project Folder
 `semiconductor-devices/final-gaa-nanosheet-fet/`
 
 ---
 
-### :star:STM32F429 Blackjack Touchscreen Game  
+### :star: [STM32F429 Blackjack Touchscreen Game](embedded-systems/blackjack-stm32f429-project) 
 **Embedded Systems, C, HAL Drivers, Touch UI**  
 Custom embedded application developed on the STM32F429DISC-1 platform featuring
 a touchscreen-based Blackjack game, interrupt-driven input, and modular firmware
-architecture.  
+architecture.
+
+📂 Project Folder
 `embedded-systems/stm32f429-blackjack-touchscreen/`
 
 ---
 
 ## Project Areas
 
-### PCB Design and Hardware
+### [PCB Design and Hardware](pcb-design/)
 Multi-layer PCB design, fabrication, and validation projects emphasizing
 signal integrity and power integrity.  
 `pcb-design/`
 
-### High-Speed Digital & Signal Integrity
+### [High-Speed Digital & Signal Integrity](high-speed-signal-integrity/)
 Time- and frequency-domain analysis of interconnects, decoupling networks,
 and multi-GHz digital systems.  
 `high-speed-signal-integrity/`
 
-### Semiconductor Devices
+### [Semiconductor Devices](semiconductor-devices/)
 Device characterization experiments and research papers covering diodes,
 MOSFETs, photonics, and advanced CMOS architectures.  
 `semiconductor-devices/`
 
-### Electromagnetics, Waves, and Fields
+### [Electromagnetics, Waves, and Fields](electromagnetics-waves-fields)
 Applied electromagnetic modeling and simulation projects.  
 `electromagnetics-waves-fields/`
 
-### Embedded Systems
+### [Embedded Systems](embedded-systems/)
 STM32 and microcontroller-based projects involving real-time firmware,
 peripheral drivers, and user interfaces.  
 `embedded-systems/`
@@ -110,12 +118,11 @@ peripheral drivers, and user interfaces.
 
 ## Tools and Technologies
 
-- Programming: C/C++, Python, MATLab
-- Embedded Platforms: STM32, Arduino, ARM Cortex-M  
-- PCB Design: Altium Designer  
-- Simulation: LTSpice, SIMetrix, Keysight ADS  
-- Measurement: Oscilloscopes, SMUs, Logic Analyzers  
-- Analysis: MATLAB, Python  
+- Programming/Analysis: C/C++, Python, MATLab
+- Embedded Platforms: STM32, Arduino, ARM Cortex-M
+- Simulation: LTSpice, SIMetrix, Keysight ADS
+- Measurement: Oscilloscopes, SMUs, Logic Analyzers
+- Softwares: ADS, HyperLynx, Altium Designer 
 
 ---
 
