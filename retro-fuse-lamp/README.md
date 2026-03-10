@@ -29,9 +29,9 @@ emphasizing power efficiency, safe battery management, and compact embedded inte
 
 ### Hardware Overview
 
-![Lamp Angle 1](lamp-angle1.jpg)
-![Lamp Angle 2](lamp-angle2.jpg)
-![Lamp Angle 3](lamp-angle3.jpg)
+![Lamp Angle 1](lamp-angle1.png)
+![Lamp Angle 2](lamp-angle2.png)
+![Lamp Angle 3](lamp-angle3.png)
 
 ## Technical Objectives
 
