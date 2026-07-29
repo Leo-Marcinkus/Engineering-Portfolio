@@ -160,10 +160,7 @@ clears the target.
 ## Files
 
 - `FinalReport_LeoMarcinkus.pdf` - Full technical report and measurements  
-- `DRAM_Presentation_LeoMarcinkus.pdf` - Project presentation  
-- `schematic/` - S-Edit schematic exports  
-- `simulation/` - T-Spice netlist and waveform captures  
-- `layout/` - L-Edit layout screenshots  
+- `DRAM_Presentation_LeoMarcinkus.pdf` - Project presentation   
 
 PDK files from the Generic 250 nm process library are not included in this
 repository.
