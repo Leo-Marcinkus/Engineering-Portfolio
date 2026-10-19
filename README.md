@@ -22,6 +22,30 @@ working on in-pixel mixed-signal circuits.
 
 </div>
 
+## Current Research
+
+<div class="card research" markdown="1">
+
+<span class="badge">In progress</span>
+
+### In-Pixel Phase Detector and Liquid-Crystal Driver
+**Mixed-Signal IC Design, X-FAB XS018 180 nm, Prof. Kelvin Wagner**
+
+Research Assistant in a photonic neuromorphic systems group developing an
+in-pixel CMOS circuit for a 25 x 25 µm pixel array on the X-FAB XS018
+180 nm image-sensor process. Each pixel uses a dual-tap pinned photodiode
+and an auto-zeroed comparator to detect the phase of modulated light, then
+drives a liquid-crystal pad above the pixel.
+
+- Designing the 1.8 V to 3.3 V level shifter and latch that holds each
+  pixel's decision for a 1 ms frame and drives the 3.3 V XOR pad driver
+- Set up the Siemens EDA custom IC flow (Custom IC, Calibre DRC/LVS) and
+  licensing on a Rocky Linux VM for the group
+
+Design files will be added as the work progresses.
+
+</div>
+
 ## Featured Projects
 
 <div class="card hero" markdown="1">
@@ -175,30 +199,6 @@ Touchscreen Blackjack on the STM32F429DISC-1 with interrupt-driven input
 and modular firmware architecture.
 
 </div>
-
-</div>
-
-## Current Research
-
-<div class="card research" markdown="1">
-
-<span class="badge">In progress</span>
-
-### In-Pixel Phase Detector and Liquid-Crystal Driver
-**Mixed-Signal IC Design, X-FAB XS018 180 nm, Prof. Kelvin Wagner**
-
-Research Assistant in a photonic neuromorphic systems group developing an
-in-pixel CMOS circuit for a 25 x 25 µm pixel array on the X-FAB XS018
-180 nm image-sensor process. Each pixel uses a dual-tap pinned photodiode
-and an auto-zeroed comparator to detect the phase of modulated light, then
-drives a liquid-crystal pad above the pixel.
-
-- Designing the 1.8 V to 3.3 V level shifter and latch that holds each
-  pixel's decision for a 1 ms frame and drives the 3.3 V XOR pad driver
-- Set up the Siemens EDA custom IC flow (Custom IC, Calibre DRC/LVS) and
-  licensing on a Rocky Linux VM for the group
-
-Design files will be added as the work progresses.
 
 </div>
 

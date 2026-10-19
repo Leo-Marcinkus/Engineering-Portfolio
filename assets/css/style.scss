@@ -4,25 +4,37 @@
 @import "jekyll-theme-minimal";
 @import "rouge-github";
 
+//Palette
+/* Change these values to re-theme the whole site */
+$panel: #0e1726;        /* sidebar background */
+$panel-text: #e6ebf2;   /* sidebar text */
+$panel-muted: #9aa7b8;  /* sidebar secondary text */
+$hi: #cfb87c;           /* highlight: bars, badges, primary button */
+$hi-ink: #0e1726;       /* text on top of the highlight color */
+$accent: #1d5fa8;       /* links and tag lines on the light page */
+$page: #f2f4f7;         /* main page background */
+
 //Tokens
-$ink: #1f2328;
-$text: #3d444d;
-$muted: #656d76;
-$line: #d8dee4;
-$soft: #f6f8fa;
-$accent: #0b5cad;
-$accent-soft: #e8f1fb;
+$ink: #18202b;
+$text: #3a4350;
+$muted: #5f6a78;
+$line: #d9dfe6;
+$card: #ffffff;
 $well: #11161d;
-$side: 250px;
-$gap: 56px;
-$main: 820px;
+$side: 300px;
+$main: 860px;
 
 //Base
+html {
+  background: $page;
+}
+
 body {
-  background: #fff;
+  background: $page;
   color: $text;
   font: 15px/1.65 "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 56px 40px;
+  margin: 0;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -31,7 +43,7 @@ h1, h2, h3, h4, h5, h6, strong, th, dt {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -39,12 +51,20 @@ h1 {
 }
 
 h2 {
-  font-size: 22px;
-  font-weight: 650;
+  font-size: 23px;
+  font-weight: 700;
   letter-spacing: -0.01em;
-  margin: 48px 0 18px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid $line;
+  margin: 52px 0 20px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 3px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: $hi;
 }
 
 h3 {
@@ -59,7 +79,7 @@ a {
 }
 
 a:hover, a:focus {
-  color: darken($accent, 10%);
+  color: darken($accent, 12%);
   font-weight: inherit;
   text-decoration: underline;
 }
@@ -70,9 +90,14 @@ code, pre {
 }
 
 code {
-  background: $soft;
+  background: darken($page, 5%);
   border-radius: 4px;
   padding: 1px 5px;
+}
+
+pre {
+  background: $card;
+  border-color: $line;
 }
 
 pre code {
@@ -90,6 +115,7 @@ img {
 }
 
 table {
+  background: $card;
   border: 1px solid $line;
   border-radius: 8px;
   border-collapse: separate;
@@ -99,7 +125,8 @@ table {
 }
 
 th {
-  background: $soft;
+  background: lighten($panel, 6%);
+  color: $panel-text;
   font-weight: 600;
 }
 
@@ -112,73 +139,86 @@ tr:last-child td {
   border-bottom: 0;
 }
 
+blockquote {
+  border-left: 3px solid $hi;
+}
+
 //Layout
 .wrapper {
   width: auto;
-  max-width: $side + $gap + $main;
-  margin: 0 auto;
-}
-
-header {
-  width: $side;
-  position: fixed;
-  top: 56px;
+  margin: 0 0 0 $side;
 }
 
 section {
   width: auto;
   max-width: $main;
   float: none;
-  margin-left: $side + $gap;
-  padding-bottom: 40px;
-}
-
-footer {
-  width: $side;
-  bottom: 40px;
-  color: $muted;
+  margin: 0 auto;
+  padding: 56px 48px 64px;
 }
 
 //Sidebar
+header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: $side;
+  box-sizing: border-box;
+  padding: 52px 32px 28px;
+  background: $panel;
+  color: $panel-text;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
 header .name {
   display: block;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: $ink;
+  color: #fff;
   margin-bottom: 6px;
+  text-decoration: none;
+}
+
+header .name:hover {
+  color: $hi;
   text-decoration: none;
 }
 
 header .role {
   font-size: 14px;
-  color: $muted;
-  margin: 0 0 14px;
+  color: $panel-muted;
+  margin: 0 0 16px;
 }
 
 header .focus {
   font-size: 14px;
-  color: $text;
-  margin: 0 0 24px;
+  color: $panel-text;
+  margin: 0 0 28px;
   padding-left: 12px;
-  border-left: 3px solid $accent;
+  border-left: 3px solid $hi;
 }
 
 .site-nav {
   display: flex;
   flex-direction: column;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .site-nav a {
-  color: $text;
+  color: $panel-text;
   font-weight: 500;
   font-size: 14px;
-  padding: 5px 0;
+  padding: 6px 0 6px 12px;
+  border-left: 2px solid rgba(255, 255, 255, 0.12);
 }
 
 .site-nav a:hover {
-  color: $accent;
+  color: $hi;
+  border-left-color: $hi;
   text-decoration: none;
 }
 
@@ -188,16 +228,29 @@ header .focus {
   gap: 8px;
 }
 
+header footer {
+  position: static;
+  width: auto;
+  margin-top: auto;
+  padding-top: 28px;
+  color: $panel-muted;
+}
+
+header footer p {
+  margin: 0;
+}
+
+//Buttons
 .btn, a.btn {
   display: inline-block;
   font-size: 13px;
   font-weight: 500;
   line-height: 1;
-  padding: 8px 12px;
+  padding: 9px 13px;
   border: 1px solid $line;
   border-radius: 6px;
   color: $ink;
-  background: #fff;
+  background: $card;
   text-decoration: none;
 }
 
@@ -208,14 +261,37 @@ header .focus {
 }
 
 .btn.primary {
-  background: $accent;
-  border-color: $accent;
-  color: #fff;
+  background: $hi;
+  border-color: $hi;
+  color: $hi-ink;
+  font-weight: 600;
 }
 
 .btn.primary:hover {
-  background: darken($accent, 8%);
-  color: #fff;
+  background: lighten($hi, 8%);
+  border-color: lighten($hi, 8%);
+  color: $hi-ink;
+}
+
+header .btn {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.22);
+  color: $panel-text;
+}
+
+header .btn:hover {
+  border-color: $hi;
+  color: $hi;
+}
+
+header .btn.primary {
+  background: $hi;
+  border-color: $hi;
+  color: $hi-ink;
+}
+
+header .btn.primary:hover {
+  color: $hi-ink;
 }
 
 .back {
@@ -232,11 +308,12 @@ header .focus {
 }
 
 .now {
-  background: $soft;
+  background: $card;
   border: 1px solid $line;
+  border-left: 4px solid $hi;
   border-radius: 10px;
   padding: 14px 18px;
-  margin: 0 0 20px;
+  margin: 0 0 22px;
 }
 
 .now p {
@@ -248,17 +325,18 @@ header .focus {
   position: relative;
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: $card;
   border: 1px solid $line;
   border-radius: 12px;
   padding: 18px 20px 6px;
   overflow: hidden;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
   transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
 }
 
 .card:hover {
-  border-color: lighten($accent, 25%);
-  box-shadow: 0 8px 24px rgba(31, 35, 40, 0.08);
+  border-color: $hi;
+  box-shadow: 0 10px 28px rgba(16, 24, 40, 0.12);
   transform: translateY(-2px);
 }
 
@@ -283,7 +361,6 @@ header .focus {
 
 /* Tag line under each title */
 .card > h3 + p {
-  order: 0;
   font-size: 12px;
   margin: 0 0 10px;
 }
@@ -346,36 +423,52 @@ header .focus {
 }
 
 .grid.compact .card {
-  border-top: 3px solid $accent;
+  border-top: 3px solid $hi;
 }
 
 /* Research card */
 .card.research {
-  border-left: 4px solid $accent;
-  padding-top: 20px;
+  background: $panel;
+  border: 0;
+  border-left: 4px solid $hi;
+  padding: 22px 24px 8px;
+  color: $panel-text;
 }
 
 .card.research:hover {
   transform: none;
+  box-shadow: 0 10px 28px rgba(16, 24, 40, 0.18);
 }
 
-.badge {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: $accent;
-  background: $accent-soft;
-  border-radius: 999px;
-  padding: 3px 10px;
-  margin-bottom: 10px;
-  align-self: flex-start;
+.card.research h3,
+.card.research strong {
+  color: #fff;
+}
+
+.card.research > h3 + p strong {
+  color: $hi;
+}
+
+.card.research p,
+.card.research li {
+  color: $panel-text;
 }
 
 .card.research ul {
   font-size: 14px;
   padding-left: 20px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $hi-ink;
+  background: $hi;
+  border-radius: 999px;
+  padding: 3px 10px;
 }
 
 //Project areas
@@ -384,12 +477,12 @@ header .focus {
   border: 1px solid $line;
   border-radius: 10px;
   padding: 14px 16px 2px;
-  background: $soft;
+  background: $card;
+  transition: border-color 0.15s;
 }
 
 .tile:hover {
-  border-color: $accent;
-  background: #fff;
+  border-color: $hi;
 }
 
 .tile h3 {
@@ -422,6 +515,7 @@ header .focus {
 .tools ul {
   list-style: none;
   padding: 0;
+  background: $card;
   border: 1px solid $line;
   border-radius: 10px;
   overflow: hidden;
@@ -455,6 +549,7 @@ header .focus {
 
 .contact li {
   font-size: 14px;
+  background: $card;
   border: 1px solid $line;
   border-radius: 999px;
   padding: 6px 14px;
@@ -462,43 +557,46 @@ header .focus {
 
 //Responsive
 @media screen and (max-width: 1100px) {
-  body {
-    padding: 32px 24px;
-  }
-
-  header, footer {
-    position: static;
-    width: auto;
-    padding: 0;
+  .wrapper {
+    margin: 0;
   }
 
   header {
-    margin-bottom: 28px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid $line;
+    position: static;
+    width: auto;
+    padding: 28px 24px 24px;
   }
 
   .site-nav {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 4px 18px;
+    margin-bottom: 20px;
+  }
+
+  .site-nav a {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  header footer {
+    display: none;
   }
 
   section {
-    margin-left: 0;
     max-width: none;
     border: 0;
-    padding: 0 0 20px;
+    padding: 32px 24px 40px;
   }
 }
 
 @media screen and (max-width: 700px) {
-  body {
-    padding: 20px 16px;
+  header {
+    padding: 24px 16px 20px;
   }
 
-  .grid, .grid.compact {
-    grid-template-columns: 1fr;
+  section {
+    padding: 24px 16px 32px;
   }
 
   h1 {
@@ -507,6 +605,10 @@ header .focus {
 
   .intro > p:first-child {
     font-size: 16px;
+  }
+
+  .grid, .grid.compact {
+    grid-template-columns: 1fr;
   }
 
   .card.hero > p[align] img {
@@ -520,11 +622,11 @@ header .focus {
 }
 
 @media print {
-  header, footer, .back {
+  header, .back {
     display: none;
   }
 
-  section {
+  .wrapper, section {
     margin: 0;
   }
 }
