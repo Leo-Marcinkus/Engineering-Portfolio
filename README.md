@@ -275,12 +275,12 @@ SystemView.
 <div class="tools" markdown="1">
 
 - **Programming and Analysis** C/C++, Python, MicroPython, SystemVerilog, Verilog-A, Tcl, MATLAB
-- **Embedded Platforms** STM32, Arduino, ARM Cortex-M, ESP32
-- **PCB and IC Design** Altium Designer, KiCad, Siemens Tanner (S-Edit, T-Spice, L-Edit), Siemens Custom IC, Calibre, Cadence Virtuoso, Spectre, Genus, Innovus
-- **Signal and Power Integrity** HyperLynx (SI, PI, AMS, Advanced Solvers), Keysight ADS, Ansys Q2D
-- **Simulation** LTspice, SIMetrix, SerDes Designer
+- **Embedded Platforms** STM32, Nordic nRF, Arduino, ARM Cortex-M, ESP32
+- **PCB and IC Design** Cadence Virtuoso, Altium Designer, KiCad, Siemens Tanner (S-Edit, T-Spice, L-Edit), Siemens Custom IC, Calibre
+- **Signal and Power Integrity** HyperLynx (SI, PI, AMS, Advanced Solvers), Keysight ADS, Ansys Q2D, Ansys SIwave
+- **Simulation** LTspice, Keysight ADS, HyperLynx
 - **Measurement** Oscilloscopes, TDR, VNA, SMUs, logic analyzers
-- **Platforms** Linux (Debian, Arch, Rocky), Git
+- **Platforms** Windows, Linux (Debian, Arch, Rocky), Git
 
 </div>
 
