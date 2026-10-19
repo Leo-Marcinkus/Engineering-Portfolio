@@ -1,8 +1,7 @@
 # Lab 2.3 - TDR Hacking Resistive Terminations
 
-**Course:** ECEN 5534 - HSDE Measurement, Simulation, Analysis, and Presentation Skills  
+**Course:** ECEN 5534 - High-Speed Measurements  
 **Date:** Fall 2026  
-**Team:** Leo Marcinkus, Ruban Ford Alfred, and Alex Martinez  
 
 ## Overview
 
@@ -95,7 +94,7 @@ similarity metric |Z_meas - Z_sim| across frequency.
 
 ## Files
 
-- `lab-2.3-presentation.pdf` - Final presentation  
+- `Lab2.3_Marcinkus.pdf` - Final presentation  
 - `images/` - Key slides  
 
 ---

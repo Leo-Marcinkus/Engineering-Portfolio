@@ -1,8 +1,7 @@
 # Lab 2.2 - Measuring the Z0 of PCB Traces on PTFE
 
-**Course:** ECEN 5534 - HSDE Measurement, Simulation, Analysis, and Presentation Skills  
+**Course:** ECEN 5534 - High-Speed Measurements  
 **Date:** Fall 2026  
-**Team:** Leo Marcinkus, Ruban Ford Alfred, and Alex Martinez  
 
 ## Overview
 
@@ -109,7 +108,7 @@ calculator and field solver result.
 
 ## Files
 
-- `lab-2.2-presentation.pdf` - Final presentation  
+- `Lab2.2_Marcinkus.pdf` - Final presentation  
 - `images/` - Key slides  
 
 ---

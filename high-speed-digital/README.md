@@ -19,12 +19,14 @@ solvers, and parasitic modeling of resistive terminations.
 
 ---
 
-## [Simulation Labs](labs/)
-**Transmission lines, PRBS spectra, and decoupling in Keysight ADS**
+## [High-Speed Digital Design Labs (ECEN 5224)](labs/)
+**ADS, HyperLynx, and SerDes Designer simulation**
 
-ADS-based studies of transmission line and via impedance matching,
-time- and frequency-domain analysis of PRBS signals, and decoupling
-capacitor self-resonance and transient response.
+Transmission lines, terminations, and TDR in ADS; differential pair eye
+diagrams, skew, and termination in HyperLynx; and serial link channel
+loss, via stubs, and transmit FFE in SerDes Designer, including a clean
+15-inch channel reaching about 16.7 Gb/s with FFE versus 7.7 Gb/s with a
+stub.
 
 📂 Project Folder
 `high-speed-digital/labs/`

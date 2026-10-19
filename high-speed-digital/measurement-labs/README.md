@@ -1,6 +1,6 @@
 # High-Speed Digital Measurement Labs
 
-**Course:** ECEN 5534 - HSDE Measurement, Simulation, Analysis, and Presentation Skills  
+**Course:** ECEN 5534 - High-Speed Measurements  
 **Instructors:** Prof. Eric Bogatin and Prof. Tim Swettlen  
 **Date:** Fall 2026 (in progress)  
 
@@ -40,7 +40,7 @@ folder contains the slide deck as a PDF along with key figures.
 
 ### Modeling and Correlation
 - Importing scope waveforms into ADS as dataset sources
-- Fitting transmission-line models to measured ringing
+- Fitting transmission-line models to measured ringing, including cable loss
 - Online calculators vs 2D field solvers (HyperLynx, Ansys Q2D)
 - Sensitivity analysis of Z0 to geometry and Dk tolerances
 - Fitting R, L, C models of terminations to measured S11
@@ -51,7 +51,7 @@ folder contains the slide deck as a PDF along with key figures.
 |---|---|---|
 | [1.1](lab-1.1-cable-ringing-scope-terminations/) | Ringing in cables and scope terminations | Thevenin source model extracted for three source settings; first ringing peaks predicted within 0.2 V |
 | [1.2](lab-1.2-coax-time-of-flight/) | Time of flight in coax cables | 1.58 ns/ft measured on RG58, Dk extracted as 2.42 |
-| [1.3](lab-1.3-ringing-model-fitting/) | Hacking ringing reflections | Fitted line model cut RMS error from 1.13 V to 0.21 V |
+| [1.3](lab-1.3-ringing-model-fitting/) | Hacking ringing reflections | ADS model refined from nominal to match measured ringing, then extended with a lossy physical line |
 | [2.1](lab-2.1-vna-tdr-impedance-range/) | TDR from VNA measurements | 1-port VNA TDR within 5% from 10 Ω to 1 kΩ; limit traced to ρ resolution |
 | [2.2](lab-2.2-pcb-trace-z0-ptfe/) | Z0 of PCB traces on PTFE | Measured 25.9, 50.1, and 74.9 Ω (±0.4 Ω or better) and compared against six tools |
 | [2.3](lab-2.3-resistive-termination-modeling/) | TDR hacking resistive terminations | Fitted loop inductance from 2.59 to 8.98 nH; model valid to 1.8 to 2.5 GHz |

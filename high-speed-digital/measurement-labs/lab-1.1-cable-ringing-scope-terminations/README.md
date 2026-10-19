@@ -1,8 +1,7 @@
 # Lab 1.1 - Ringing in Cables and Scope Terminations
 
-**Course:** ECEN 5534 - HSDE Measurement, Simulation, Analysis, and Presentation Skills  
+**Course:** ECEN 5534 - High-Speed Measurements  
 **Date:** Fall 2026  
-**Team:** Leo Marcinkus and Jordan Bernhardt  
 
 ## Overview
 
@@ -90,7 +89,7 @@ measured ringing was compared against a bounce-diagram prediction.
 
 ## Files
 
-- `lab-1.1-presentation.pdf` - Final presentation with all scope captures  
+- `Lab1.1_Marcinkus.pdf` - Final presentation with all scope captures  
 - `images/` - Key slides  
 
 ---

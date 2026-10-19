@@ -1,8 +1,7 @@
 # Lab 1.2 - Time of Flight in Coax Cables
 
-**Course:** ECEN 5534 - HSDE Measurement, Simulation, Analysis, and Presentation Skills  
+**Course:** ECEN 5534 - High-Speed Measurements  
 **Date:** Fall 2026  
-**Team:** Leo Marcinkus and Jordan Bernhardt  
 
 ## Overview
 
@@ -84,7 +83,7 @@ Each data set was fit to Delay = (ns/ft) · L + t0.
 
 ## Files
 
-- `lab-1.2-presentation.pdf` - Final presentation with scope captures and fits  
+- `Lab1.2_Marcinkus.pdf` - Final presentation with scope captures and fits  
 - `images/` - Key slides  
 
 ---

@@ -1,8 +1,7 @@
 # Lab 2.1 - TDR from VNA Measurements
 
-**Course:** ECEN 5534 - HSDE Measurement, Simulation, Analysis, and Presentation Skills  
+**Course:** ECEN 5534 - High-Speed Measurements  
 **Date:** Fall 2026  
-**Team:** Leo Marcinkus, Ruban Ford Alfred, and Alex Martinez  
 
 ## Overview
 
@@ -101,7 +100,7 @@ through impedance measurement" (IEEE LAMC 2016), which gives 1 Ω to
 
 ## Files
 
-- `lab-2.1-presentation.pdf` - Final presentation  
+- `Lab2.1_Marcinkus.pdf` - Final presentation  
 - `images/` - Key slides  
 
 ---

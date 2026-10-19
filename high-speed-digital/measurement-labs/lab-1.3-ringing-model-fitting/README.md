@@ -1,38 +1,39 @@
 # Lab 1.3 - Hacking Ringing Reflections in Coax Cables
 
-**Course:** ECEN 5534 - HSDE Measurement, Simulation, Analysis, and Presentation Skills  
+**Course:** ECEN 5534 - High-Speed Measurements  
 **Date:** Fall 2026  
-**Team:** Leo Marcinkus and Jordan Bernhardt  
 
 ## Overview
 
 This lab took measured ringing waveforms from two lengths of the same
-coax cable and fit a single transmission-line model to both. The model
-started from nominal datasheet values, then its parameters were "hacked"
-until the simulated waveform matched the measurement, which reveals what
-the nominal model leaves out.
+coax cable, imported them into Keysight ADS, and built a circuit model
+that reproduces them. The model started from nominal values based on
+datasheets and earlier labs, then was refined and "hacked" until the
+simulation matched the measurement. A final step replaced the ideal line
+with a physical lossy transmission line.
 
 <p align="center">
-  <img src="images/nominal-vs-hacked-fit.png" width="700">
+  <img src="images/hacked-model-vs-measured.png" width="700">
 </p>
 
 ## Technical Objectives
 
 - Capture clean ringing waveforms on 0.5 ft and 3 ft RG58 cables
-- Import the scope data into Keysight ADS as a dataset source
-- Build one parameterized model shared by both cable lengths
-- Compare the nominal model against the measurement
-- Adjust the model parameters to fit, and interpret what the fitted
-  values mean physically
+- Import the scope data into ADS as a dataset source
+- Build a model with a Thevenin source, ideal transmission line, and the
+  scope's input impedance
+- Compare the nominal model against the measurement, then refine it
+- Test whether the fitted values are unique, and add physical cable loss
 
 ## Setup and Measurement
 
-- Source: 3 Ω output at 5 V driving RG58 coax into the scope's 1 MΩ input
-  with no probe
+- Source: Board 100, 3 Ω output at 5 V, driving RG58 coax into the scope's
+  1 MΩ input with no probe
 - Scope: Keysight DSOX4024A, 5 GSa/s, 200 MHz, 50 ns/div for both cables
   so the two data sets share one time base
-- Trigger holdoff and a low trigger threshold put the start of the edge
-  just before t = 0, since ADS only plots t ≥ 0
+- Trigger: rising edge at 1.13 V with holdoff (1.16 µs for 3 ft, 0.96 µs
+  for 0.5 ft), which puts the start of the edge just before t = 0 since
+  ADS only plots t ≥ 0
 - 2000 points at 0.25 ns per sample saved as CSV, with the time base long
   enough to show the steady state
 
@@ -44,55 +45,91 @@ the nominal model leaves out.
 | Ring period | 8.3 ns | 24.5 ns |
 | Effective TD (period / 4) | 2.1 ns | 6.1 ns |
 | Cable-only TD (1.54 ns/ft) | 0.77 ns | 4.6 ns |
-| Extra delay (fixture and scope C) | 1.3 ns | 1.5 ns |
+| Extra delay (fixture and scope) | 1.3 ns | 1.5 ns |
 | Rsrc from decay | 3.7 Ω | 3.0 Ω |
 
 The difference between the two cables gives (6.1 - 2.1) ns / 2.5 ft =
-1.6 ns/ft, consistent with Lab 1.2. Both cables carry the same ≈ 1.3 to
-1.5 ns of extra delay from the SMA-BNC adapter, connectors, and scope
-input capacitance. The decay rate implies an effective source resistance
-of 3 to 4 Ω, above the 1.7 Ω DC value from Lab 1.1, because a lossless
-model has to put the cable loss somewhere.
+1.6 ns/ft. Both cables carry about 1.3 to 1.5 ns of extra delay from the
+SMA-BNC adapter, connectors, and the scope's input capacitance and
+resistance. The decay rate implies an effective source resistance of 3 to
+4 Ω, above the 1.7 Ω DC value from Lab 1.1, because a lossless model has
+to put the cable loss somewhere.
 
-## Model
+## Bringing the Waveforms into ADS
+
+- Scope CSV headers replaced with an MDIF block header, with time shifted
+  so every sample is at t ≥ 0
+- Converted to an ADS dataset with the Data File Tool (generic MDIF)
+- Played back through a VtDataset source tied to ground through a dummy
+  resistor so no node floats
+- Transient run from 0 to 500 ns with the step fixed at 0.25 ns, matching
+  the scope sample interval
+
+The imported waveform has to look exactly like the scope screen before
+any model is added.
+
+## Edge Type
+
+Linear, cosine, and erf edges were simulated with the same rise-time
+setting to see how each maps to a 10-90 rise time. The erf edge best
+replicates a real channel but costs more to simulate. Its 10-90 rise time
+corresponds to a constant K of about 2.22 to 2.3, compared with 1.69 for
+cosine and 1.25 for linear.
+
+## Nominal, Refined, and Hacked Models
 
 <p align="center">
-  <img src="images/ads-model.png" width="700">
+  <img src="images/refined-model-values.png" width="700">
 </p>
 
-Both circuits use the same erf-edge source, series source resistance,
-ideal transmission line, and scope R and C, with every parameter held in
-one variable block so the two cables share a single set of values. The
-measured waveforms enter as dataset sources so model and measurement
-plot on the same axes. The transient step matches the 0.25 ns scope
-sample interval.
+| Parameter | Nominal | Second order | Hacked |
+|---|---|---|---|
+| Rth | 1.7 Ω | ~3 to 5 Ω | 4.55 Ω |
+| Rise time | 1 ns | under 1 ns | 0.72 ns |
+| Line impedance | 50 Ω | 47 to 53 Ω | 50 Ω |
+| Line delay | 0.77 ns | ~1 ns | 1.11 ns |
+| Scope resistance | 10 MΩ | 10 MΩ | 10 MΩ |
+| Scope capacitance | 9.5 pF | >> 9.5 pF | 22.7 pF |
 
-## Results
+- **Nominal:** Rth from Lab 1.1, a 1 ns rise time estimate, line delay
+  from the RG58 datasheet, and the 9.5 pF probe spec. It does not match
+  the measured ringing well
+- **Refined:** the decay between ringing periods implies a higher source
+  impedance than measured at DC, the hex inverter edge is faster than
+  first assumed, and connectors, adapters, and probe lines add capacitance
+  and delay
+- **Hacked:** tuning within the second-order ranges gave a close fit on the
+  0.5 ft cable. The same model, not re-optimized, still gave a reasonable
+  fit on the 3 ft cable, though less closely
 
-| Cable | Nominal TD | Fitted TD | Nominal RMS error | Fitted RMS error |
-|---|---|---|---|---|
-| 0.5 ft | 0.77 ns | 1.37 ns | 1.13 V | 0.21 V |
-| 3 ft | 4.62 ns | 5.13 ns | 2.10 V | 0.54 V |
+## Physical Lossy Line
 
-The nominal model rings at the wrong period and drifts out of phase
-within a few cycles. Lengthening the delay to include the fixture, with
-the other shared parameters adjusted alongside it, keeps the fitted model
-in phase across the plotted 160 ns window on both cables.
+<p align="center">
+  <img src="images/lossy-line-model.png" width="700">
+</p>
+
+Replacing the ideal line with a physical transmission line model added
+Dk, attenuation, and loss tangent. The model was fit first without loss,
+then with loss added, which gave a slightly better match. Attenuation had
+the larger effect on how fast the ringing decays; loss tangent only
+mattered when the rise time was very fast and the effective frequency
+content was higher.
 
 ## Key Takeaways
 
-- The first rule of importing measured data: it must look exactly like
-  the scope screen before any model is added
-- A model fitted to two lengths at once separates per-length effects
-  (cable delay) from fixed effects (fixture delay, scope capacitance)
-- Fitted values that differ from nominal are information: here they
-  quantify fixture delay and cable loss that the nominal model ignores
+- The imported waveform must look exactly like the scope screen before
+  any model is added
+- Nominal values are a starting point, not an answer; understanding the
+  measurement system itself is what lets a model be refined
+- Fitted values that differ from nominal are information: here they point
+  to fixture delay, extra capacitance, and cable loss
+- Higher-order models with loss and frequency dependence generalize
+  better than a model hacked to fit one case
 
 ## Files
 
-- `lab-1.3-presentation.pdf` - Setup, measurements, and ADS import procedure  
-- `images/nominal-vs-hacked-fit.png` - Nominal and fitted model vs measurement  
-- `images/ads-model.png` - Shared-parameter model for both cable lengths  
+- `Lab1.3_Marcinkus.pdf` - Final presentation  
+- `images/` - Key slides  
 
 ---
 

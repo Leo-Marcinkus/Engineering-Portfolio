@@ -19,6 +19,10 @@ The project involved schematic entry in S-Edit, transient simulation and
 timing analysis in T-Spice, and physical layout in L-Edit, covering the
 full custom IC design flow from specification through layout.
 
+<p align="center">
+  <img src="images/dram-layout.png" width="500">
+</p>
+
 ## Technical Objectives
 
 - Implement two 1T-1C DRAM cells sharing a common bitline pair
@@ -44,6 +48,10 @@ full custom IC design flow from specification through layout.
 Both cells connect to the same BL and BLB lines through separate wordlines
 and are initialized to opposite values, so a single transient simulation
 exercises both a logic 1 and a logic 0 read.
+
+<p align="center">
+  <img src="images/dram-schematic.png" width="550">
+</p>
 
 ## Design and Implementation
 
@@ -107,6 +115,14 @@ Testing included:
 
 ## Results
 
+<p align="center">
+  <img src="images/dram-sense-margin.png" width="700">
+</p>
+
+<p align="center">
+  <img src="images/dram-bitlines.png" width="700">
+</p>
+
 - Supply voltage: 2.5 V, matching the NMOS25 and PMOS25 device rating
 - Precharge level: approximately 1.3 V against a 1.25 V target
 - Sense margin: 57.2 mV at sense amplifier activation, against a 50 mV
@@ -159,13 +175,14 @@ clears the target.
 
 ## Files
 
-- `FinalReport_LeoMarcinkus.pdf` - Full technical report and measurements  
-- `DRAM_Presentation_LeoMarcinkus.pdf` - Project presentation   
+- `DRAM_FinalReport.pdf` - Full technical report and measurements  
+- `DRAM_Presentation.pdf` - Project presentation  
+- `images/` - Layout, schematic, and T-Spice simulation captures  
 
 PDK files from the Generic 250 nm process library are not included in this
 repository.
 
 ---
 
-For related work, see the VLSI coursework and mixed-signal simulation
-projects in this repository.
+For related work, see the [VGA/AGC mixed-signal design](../vga-agc-mixed-signal/)
+and [Cadence sky130 tool flow labs](../cadence-sky130-labs/) in this repository.
