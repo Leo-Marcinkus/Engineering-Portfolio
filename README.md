@@ -18,7 +18,7 @@ working on in-pixel mixed-signal circuits.
 
 </div>
 
-<a class="btn primary" href="Leo-Marcinkus-Resume.pdf">Download Resume (PDF)</a>
+<a class="btn primary" href="Leo-Marcinkus-Resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
 
 </div>
 
@@ -288,11 +288,11 @@ SystemView.
 
 <div class="contact" markdown="1">
 
-- [leomarcinkus@gmail.com](mailto:leomarcinkus@gmail.com)
-- [leo.marcinkus@colorado.edu](mailto:leo.marcinkus@colorado.edu)
+- <a href="mailto:leomarcinkus@gmail.com" target="_blank" rel="noopener">leomarcinkus@gmail.com</a>
+- <a href="mailto:leo.marcinkus@colorado.edu" target="_blank" rel="noopener">leo.marcinkus@colorado.edu</a>
 - (630) 864-8802
-- [LinkedIn](https://linkedin.com/in/leo-marcinkus-a18062340)
-- [Handshake](https://boulder.joinhandshake.com/profiles/leomarcinkus)
-- [GitHub](https://github.com/Leo-Marcinkus)
+- <a href="https://linkedin.com/in/leo-marcinkus-a18062340" target="_blank" rel="noopener">LinkedIn</a>
+- <a href="https://boulder.joinhandshake.com/profiles/leomarcinkus" target="_blank" rel="noopener">Handshake</a>
+- <a href="https://github.com/Leo-Marcinkus" target="_blank" rel="noopener">GitHub</a>
 
 </div>
