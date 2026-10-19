@@ -8,7 +8,7 @@ mixed-signal system simulation, and the RTL-to-layout pushbutton flow.
 **Full-Custom Design, Siemens Tanner, Generic 250 nm**
 
 <p align="center">
-  <img src="dram-1t1c-sense-amplifier/images/dram-layout.png" width="400">
+  <img src="dram-1t1c-sense-amplifier/images/dram-schematic.png" width="450">
 </p>
 
 A 13-transistor two-cell DRAM array designed, simulated, and laid out in

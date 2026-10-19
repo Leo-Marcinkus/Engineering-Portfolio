@@ -20,7 +20,7 @@ timing analysis in T-Spice, and physical layout in L-Edit, covering the
 full custom IC design flow from specification through layout.
 
 <p align="center">
-  <img src="images/dram-layout.png" width="500">
+  <img src="images/dram-schematic.png" width="550">
 </p>
 
 ## Technical Objectives
@@ -49,10 +49,6 @@ Both cells connect to the same BL and BLB lines through separate wordlines
 and are initialized to opposite values, so a single transient simulation
 exercises both a logic 1 and a logic 0 read.
 
-<p align="center">
-  <img src="images/dram-schematic.png" width="550">
-</p>
-
 ## Design and Implementation
 
 ### Schematic Design
@@ -80,6 +76,11 @@ natural equalization through charge sharing, which guarantees a precise
 midpoint regardless of bitline parasitic mismatch.
 
 ### Physical Layout
+
+<p align="center">
+  <img src="images/dram-layout.png" width="500">
+</p>
+
 The layout was completed in L-Edit using PDK-provided parameterized nmos25
 and pmos25 cells with widths and lengths matching the schematic. The
 floorplan follows a top-to-bottom organization: VDD rail, precharge block,

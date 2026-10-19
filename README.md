@@ -64,7 +64,7 @@ growing from 2.6 to 9.0 nH with via distance. Fall 2026.
 **VLSI, Custom IC Design, Siemens Tanner**
 
 <p align="center">
-  <img src="vlsi/dram-1t1c-sense-amplifier/images/dram-layout.png" width="550">
+  <img src="vlsi/dram-1t1c-sense-amplifier/images/dram-schematic.png" width="500">
 </p>
 
 A 13-transistor two-cell DRAM array designed, simulated, and laid out in Siemens
@@ -76,6 +76,22 @@ refresh. ECEN 4012, Spring 2026.
 
 📂 Project Folder
 `vlsi/dram-1t1c-sense-amplifier/`
+
+---
+
+### :star: [Retro Glass Fuse Wireless Lamp](retro-fuse-lamp/)
+**Embedded Systems, ESP32, Power Electronics**
+
+<p align="center">
+  <img src="retro-fuse-lamp/retro-fuse-lamp-demo-web.gif" width="400">
+</p>
+
+A battery-powered lighting system built on ESP32 microcontrollers with
+ESP-NOW wireless control, integrating Li-ion charging, power regulation,
+and MOSFET LED switching into a compact hardware prototype.
+
+📂 Project Folder
+`retro-fuse-lamp/`
 
 ---
 
@@ -156,20 +172,6 @@ architecture.
 
 📂 Project Folder
 `embedded-systems/blackjack-stm32f429-project/`
-
----
-
-## Personal Projects
-
-### :bulb: [Retro Glass Fuse Wireless Lamp](retro-fuse-lamp/)
-**Embedded Systems, ESP32, Power Electronics**
-
-A battery-powered lighting system built on ESP32 microcontrollers with
-ESP-NOW wireless control, integrating Li-ion charging, power regulation,
-and MOSFET LED switching into a compact hardware prototype.
-
-📂 Project Folder
-`retro-fuse-lamp/`
 
 ---
 
