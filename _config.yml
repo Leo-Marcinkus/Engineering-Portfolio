@@ -1,3 +1,5 @@
 theme: jekyll-theme-minimal
+title: Leo Marcinkus
+description: Electrical Engineering, B.S./M.S., University of Colorado Boulder
 plugins:
   - jemoji

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    {% include head-custom.html %}
+  </head>
+  <body>
+    {% assign home = "/" | relative_url %}
+    <div class="wrapper">
+      <header>
+        <a class="name" href="{{ home }}">Leo Marcinkus</a>
+        <p class="role">Electrical Engineering, B.S./M.S.<br>University of Colorado Boulder</p>
+        <p class="focus">Signal and power integrity, custom IC design, and measurement-driven hardware.</p>
+
+        <nav class="site-nav">
+          <a href="{{ home }}#featured-projects">Projects</a>
+          <a href="{{ home }}#current-research">Research</a>
+          <a href="{{ home }}#project-areas">Project Areas</a>
+          <a href="{{ home }}#tools-and-technologies">Tools</a>
+          <a href="{{ home }}#contact">Contact</a>
+        </nav>
+
+        <div class="side-links">
+          <a class="btn primary" href="{{ "/Leo-Marcinkus-Resume.pdf" | relative_url }}">Resume (PDF)</a>
+          <a class="btn" href="https://www.linkedin.com/in/leo-marcinkus-a18062340">LinkedIn</a>
+          <a class="btn" href="https://github.com/Leo-Marcinkus">GitHub</a>
+          <a class="btn" href="mailto:leomarcinkus@gmail.com">Email</a>
+        </div>
+      </header>
+
+      <section>
+        {% unless page.url == "/" %}
+        <a class="back" href="{{ home }}">&larr; Portfolio home</a>
+        {% endunless %}
+
+        {{ content }}
+      </section>
+
+      <footer>
+        <p><small>Hosted on GitHub Pages</small></p>
+      </footer>
+    </div>
+  </body>
+</html>

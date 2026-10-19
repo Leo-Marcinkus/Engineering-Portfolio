@@ -1,0 +1,530 @@
+---
+---
+
+@import "jekyll-theme-minimal";
+@import "rouge-github";
+
+//Tokens
+$ink: #1f2328;
+$text: #3d444d;
+$muted: #656d76;
+$line: #d8dee4;
+$soft: #f6f8fa;
+$accent: #0b5cad;
+$accent-soft: #e8f1fb;
+$well: #11161d;
+$side: 250px;
+$gap: 56px;
+$main: 820px;
+
+//Base
+body {
+  background: #fff;
+  color: $text;
+  font: 15px/1.65 "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 56px 40px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, strong, th, dt {
+  color: $ink;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0 0 18px;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  margin: 48px 0 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid $line;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 28px 0 10px;
+}
+
+a {
+  color: $accent;
+}
+
+a:hover, a:focus {
+  color: darken($accent, 10%);
+  font-weight: inherit;
+  text-decoration: underline;
+}
+
+code, pre {
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.88em;
+}
+
+code {
+  background: $soft;
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+hr {
+  background: $line;
+  margin: 32px 0;
+}
+
+img {
+  border-radius: 6px;
+}
+
+table {
+  border: 1px solid $line;
+  border-radius: 8px;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+th {
+  background: $soft;
+  font-weight: 600;
+}
+
+th, td {
+  padding: 8px 12px;
+  border-bottom: 1px solid $line;
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+//Layout
+.wrapper {
+  width: auto;
+  max-width: $side + $gap + $main;
+  margin: 0 auto;
+}
+
+header {
+  width: $side;
+  position: fixed;
+  top: 56px;
+}
+
+section {
+  width: auto;
+  max-width: $main;
+  float: none;
+  margin-left: $side + $gap;
+  padding-bottom: 40px;
+}
+
+footer {
+  width: $side;
+  bottom: 40px;
+  color: $muted;
+}
+
+//Sidebar
+header .name {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: $ink;
+  margin-bottom: 6px;
+  text-decoration: none;
+}
+
+header .role {
+  font-size: 14px;
+  color: $muted;
+  margin: 0 0 14px;
+}
+
+header .focus {
+  font-size: 14px;
+  color: $text;
+  margin: 0 0 24px;
+  padding-left: 12px;
+  border-left: 3px solid $accent;
+}
+
+.site-nav {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.site-nav a {
+  color: $text;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.site-nav a:hover {
+  color: $accent;
+  text-decoration: none;
+}
+
+.side-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn, a.btn {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 8px 12px;
+  border: 1px solid $line;
+  border-radius: 6px;
+  color: $ink;
+  background: #fff;
+  text-decoration: none;
+}
+
+.btn:hover {
+  border-color: $accent;
+  color: $accent;
+  text-decoration: none;
+}
+
+.btn.primary {
+  background: $accent;
+  border-color: $accent;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: darken($accent, 8%);
+  color: #fff;
+}
+
+.back {
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+//Intro
+.intro > p:first-child {
+  font-size: 18px;
+  line-height: 1.6;
+  color: $ink;
+}
+
+.now {
+  background: $soft;
+  border: 1px solid $line;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 0 0 20px;
+}
+
+.now p {
+  margin: 0;
+}
+
+//Cards
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid $line;
+  border-radius: 12px;
+  padding: 18px 20px 6px;
+  overflow: hidden;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+.card:hover {
+  border-color: lighten($accent, 25%);
+  box-shadow: 0 8px 24px rgba(31, 35, 40, 0.08);
+  transform: translateY(-2px);
+}
+
+.card h3 {
+  margin: 0 0 6px;
+}
+
+.card h3 a {
+  color: $ink;
+}
+
+.card h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.card:hover h3 a {
+  color: $accent;
+  text-decoration: none;
+}
+
+/* Tag line under each title */
+.card > h3 + p {
+  order: 0;
+  font-size: 12px;
+  margin: 0 0 10px;
+}
+
+.card > h3 + p strong {
+  color: $accent;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.card > p {
+  font-size: 14px;
+  margin: 0 0 14px;
+}
+
+/* Image moves to the top of the card, edge to edge */
+.card > p[align] {
+  order: -1;
+  margin: -18px -20px 16px;
+  background: $well;
+}
+
+.card > p[align] img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.card > p[align] img.cover {
+  object-fit: cover;
+}
+
+.card.hero {
+  margin-bottom: 20px;
+}
+
+.card.hero > p[align] img {
+  height: 340px;
+}
+
+.card.hero > h3 {
+  font-size: 21px;
+}
+
+.card.hero > p {
+  font-size: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.grid.compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid.compact .card {
+  border-top: 3px solid $accent;
+}
+
+/* Research card */
+.card.research {
+  border-left: 4px solid $accent;
+  padding-top: 20px;
+}
+
+.card.research:hover {
+  transform: none;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $accent;
+  background: $accent-soft;
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+.card.research ul {
+  font-size: 14px;
+  padding-left: 20px;
+}
+
+//Project areas
+.tile {
+  position: relative;
+  border: 1px solid $line;
+  border-radius: 10px;
+  padding: 14px 16px 2px;
+  background: $soft;
+}
+
+.tile:hover {
+  border-color: $accent;
+  background: #fff;
+}
+
+.tile h3 {
+  font-size: 15px;
+  margin: 0 0 4px;
+}
+
+.tile h3 a {
+  color: $ink;
+}
+
+.tile h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.tile:hover h3 a {
+  color: $accent;
+  text-decoration: none;
+}
+
+.tile p {
+  font-size: 13.5px;
+  color: $muted;
+  margin: 0 0 12px;
+}
+
+//Tools
+.tools ul {
+  list-style: none;
+  padding: 0;
+  border: 1px solid $line;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tools li {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 16px;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-bottom: 1px solid $line;
+}
+
+.tools li:last-child {
+  border-bottom: 0;
+}
+
+.tools li strong {
+  font-weight: 600;
+}
+
+//Contact
+.contact ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contact li {
+  font-size: 14px;
+  border: 1px solid $line;
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+
+//Responsive
+@media screen and (max-width: 1100px) {
+  body {
+    padding: 32px 24px;
+  }
+
+  header, footer {
+    position: static;
+    width: auto;
+    padding: 0;
+  }
+
+  header {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $line;
+  }
+
+  .site-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px 18px;
+  }
+
+  section {
+    margin-left: 0;
+    max-width: none;
+    border: 0;
+    padding: 0 0 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    padding: 20px 16px;
+  }
+
+  .grid, .grid.compact {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .intro > p:first-child {
+    font-size: 16px;
+  }
+
+  .card.hero > p[align] img {
+    height: 240px;
+  }
+
+  .tools li {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
+
+@media print {
+  header, footer, .back {
+    display: none;
+  }
+
+  section {
+    margin: 0;
+  }
+}
